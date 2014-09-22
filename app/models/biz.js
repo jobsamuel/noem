@@ -5,6 +5,6 @@ var mongoose = require('mongoose')
 				type: String
 			}
 ,	bizSchema = mongoose.Schema(schema)
-,	Biz = mongoose.model("Biz", bizSchema)
+,	Biz = mongoose.model("Biz", bizSchema);
 
 module.exports = Biz;
