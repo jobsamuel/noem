@@ -1,4 +1,3 @@
-nomo
-====
+# noem
 
-A demo API REST that uses Node, MongoDB and Express.
+A demo API REST that uses Node, Express and MongoDB.
