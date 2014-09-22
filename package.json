@@ -1,0 +1,32 @@
+{
+  "name": "nomo",
+  "version": "0.0.0",
+  "description": "A demo API REST that uses Node, MongoDB and Express.",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jobsamuel/nomo.git"
+  },
+  "keywords": [
+    "demo",
+    "api",
+    "rest",
+    "node",
+    "mongodb",
+    "express"
+  ],
+  "author": "Jobsamuel Núñez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jobsamuel/nomo/issues"
+  },
+  "homepage": "https://github.com/jobsamuel/nomo",
+  "dependencies": {
+    "express": "^4.9.4",
+    "mongoose": "^3.8.16",
+    "body-parser": "^1.8.3"
+  }
+}
