@@ -2,51 +2,51 @@ var express = require('express')
 ,	Biz = require('./../models/biz') 
 ,	router = express.Router();
 
-function allBusiness(req, res) {
+function allBusiness(req, res, next) {
 	Biz.find({}, function (err, businesses) {
 		if (err) {
-			res.send(err);
+			next(err);
 		} else {
 			res.send(businesses);
 		}
 	});
 }
 
-function justOneBusiness(req, res) {
+function justOneBusiness(req, res, next) {
 	Biz.findOne({name: req.params.name}, function (err, business) {
 		if (err) {
-			res.send(err);
+			next(err);
 		} else {
 			res.send(business);
 		}
 	});
 }
 
-function addBusiness(req, res) {
+function addBusiness(req, res, next) {
 	var business = new Biz({name: req.body.name, website: req.body.website, type: req.body.type});
 	business.save(function (err, business) {
 		if (err) {
-			res.send({message: err, business: null});
+			next(err);
 		} else {
 			res.send({message: "Business sucessfully added to database.", business: business});
 		}
 	});
 }
 
-function updateBusiness(req, res) {
+function updateBusiness(req, res, next) {
 	Biz.update({name: req.params.name}, {name: req.body.name, website: req.body.website, type: req.body.type}, function (err, updated) {
 		if (err) {
-			res.send({message: err, updated: null});
+			next(err);
 		} else {
 			res.send({message: "Business updated", updated: updated});
 		}
 	});
 }
 
-function removeBusiness(req, res) {
+function removeBusiness(req, res, next) {
 	Biz.remove({name: req.params.name}, function (err, deleted) {
 		if (err) {
-			res.send({message: err, deleted: null});
+			next(err);
 		} else {
 			res.send({message: "Business deleted.", deleted: deleted});
 		}	
