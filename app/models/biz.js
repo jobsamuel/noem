@@ -1,7 +1,7 @@
 var mongoose = require('mongoose')
 ,	schema = {
 				name: String,
-				type: String,
+				industry: String,
 				logo: String,
 				website: String
 			}

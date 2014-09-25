@@ -23,7 +23,7 @@ function justOneBusiness(req, res, next) {
 }
 
 function addBusiness(req, res, next) {
-	var business = new Biz({name: req.body.name, type: req.body.type, logo: req.body.logo, website: req.body.website});
+	var business = new Biz({name: req.body.name, industry: req.body.industry, logo: req.body.logo, website: req.body.website});
 	business.save(function (err, business) {
 		if (err) {
 			next(err);
@@ -34,7 +34,7 @@ function addBusiness(req, res, next) {
 }
 
 function updateBusiness(req, res, next) {
-	Biz.update({name: req.params.name}, {name: req.body.name, type: req.body.type, logo: req.body.logo, website: req.body.website}, function (err, updated) {
+	Biz.update({name: req.params.name}, {name: req.body.name, industry: req.body.industry, logo: req.body.logo, website: req.body.website}, function (err, updated) {
 		if (err) {
 			next(err);
 		} else {
