@@ -1,8 +1,9 @@
 var mongoose = require('mongoose')
 ,	schema = {
 				name: String,
-				website: Boolean,
-				type: String
+				type: String,
+				logo: String,
+				website: String
 			}
 ,	bizSchema = mongoose.Schema(schema)
 ,	Biz = mongoose.model("Biz", bizSchema);
