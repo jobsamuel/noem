@@ -3,15 +3,16 @@ var mongoose = require('mongoose')
 ,	express = require('express')
 ,	router = require('./routes/router')
 ,	errorHandler = require('./routes/errors')
+,	config = require('./configuration/config')
 ,	cors = require('cors')
 ,	app = express();
 
 
-mongoose.connect('mongodb://localhost/noem', function (err) {
+mongoose.connect(config.database, function (err) {
 	if (err) {
 		console.log(err);
 	} else {
-		console.log("Connected to database.");	
+		console.log("Connected to database.");
 	}
 });
 
