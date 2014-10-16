@@ -17,8 +17,6 @@ $ npm install
 $ node app/app.js
 ```
 
-<sup>**Before run the app** it's necessary to set `<YOUR_DATABASE_URL>` in `app/configuration/config.js`<sup>
-
 # license
 
 [MIT License](http://opensource.org/licenses/MIT) © Jobsamuel Núñez
