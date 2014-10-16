@@ -1,11 +1,11 @@
 var mongoose = require('mongoose')
-,	schema = {
+, schema = {
 				name: String,
 				industry: String,
 				logo: String,
 				website: String
 			}
-,	bizSchema = mongoose.Schema(schema)
-,	Biz = mongoose.model("Biz", bizSchema);
+, bizSchema = mongoose.Schema(schema)
+, Biz = mongoose.model("Biz", bizSchema);
 
 module.exports = Biz;

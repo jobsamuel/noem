@@ -1,5 +1,6 @@
 var config = {
-  database: "mongodb://<YOUR_DATABASE_URL>/noem"
+  database: "mongodb://localhost/noem",
+  local: "mongodb://localhost/noem"
 }
 
 module.exports = config;

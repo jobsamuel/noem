@@ -1,6 +1,6 @@
 var express = require('express')
-,	Biz = require('./../models/biz') 
-,	router = express.Router();
+, Biz = require('./../models/biz') 
+, router = express.Router();
 
 function allBusiness(req, res, next) {
 	Biz.find({}, function (err, businesses) {

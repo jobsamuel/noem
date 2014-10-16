@@ -2,7 +2,7 @@
   "name": "noem",
   "version": "0.0.0",
   "description": "A demo API REST that uses Node, Express and MongoDB.",
-  "main": "app/app.js",
+  "main": "cluster.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,9 +25,10 @@
   },
   "homepage": "https://github.com/jobsamuel/nomo",
   "dependencies": {
-    "express": "^4.9.4",
-    "mongoose": "^3.8.16",
     "body-parser": "^1.8.3",
-    "cors": "^2.4.2"
+    "cluster": "^0.7.7",
+    "cors": "^2.4.2",
+    "express": "^4.9.4",
+    "mongoose": "^3.8.16"
   }
 }

@@ -1,11 +1,11 @@
 var mongoose = require('mongoose')
-,	bodyParser = require('body-parser')
-,	express = require('express')
-,	router = require('./routes/router')
-,	errorHandler = require('./routes/errors')
-,	config = require('./configuration/config')
-,	cors = require('cors')
-,	app = express();
+, bodyParser = require('body-parser')
+, express = require('express')
+, router = require('./routes/router')
+, errorHandler = require('./routes/errors')
+, config = require('./configuration/config')
+, cors = require('cors')
+, app = express();
 
 
 mongoose.connect(config.database, function (err) {
@@ -34,6 +34,5 @@ app.use('/', router);
 // Error handler.
 errorHandler(app);
 
-app.listen(3000, function() {
-	console.log("App listening on port 3000");
-});
+// Export app object.
+module.exports = app;
