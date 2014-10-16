@@ -3,12 +3,11 @@ var mongoose = require('mongoose')
 , express = require('express')
 , router = require('./routes/router')
 , errorHandler = require('./routes/errors')
-, config = require('./configuration/config')
 , cors = require('cors')
-, app = express();
+, app = express()
+, database = process.env.MONGODB || "mongodb://localhost/noem";
 
-
-mongoose.connect(config.database, function (err) {
+mongoose.connect(database, function (err) {
 	if (err) {
 		console.log(err);
 	} else {
