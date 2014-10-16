@@ -14,7 +14,7 @@ A demo API REST that uses Node, Express and MongoDB.
 ```
 $ git clone git@github.com:jobsamuel/noem.git
 $ npm install
-$ node app/app.js
+$ node cluster.js
 ```
 
 # license
